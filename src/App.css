@@ -1,0 +1,27 @@
+.title {
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  width: 500px;
+}
+
+.cButton {
+  width: 100px;
+}
+
+.pButton {
+  display: flex;
+  justify-content: center;
+}
+
+.font {
+  font-size: 100;
+}
+
+.centered {
+  text-align: center;
+}
