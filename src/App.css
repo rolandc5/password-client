@@ -23,5 +23,12 @@
 }
 
 .centered {
+  display: flex;
+  justify-content: center;
+}
+
+.passwordList {
+  display: flex;
   text-align: center;
+  flex-direction: column;
 }

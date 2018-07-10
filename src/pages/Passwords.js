@@ -12,7 +12,7 @@ class Password extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3030/getInfo')
+    axios.get('https://password-db.herokuapp.com/getInfo')
       .then(received => {
         const list = received.data.data;
         this.setState({ list: list })
@@ -26,18 +26,23 @@ class Password extends Component {
   render() {
     return (
       <div>
-        <Link to="/"> Back </Link>
-        <div>
+        <div className="passwordList">
           { this.state.list.map((value, i) => {
               return (
                   <div key={i}>
                     <div>
+                      { i + 1}
+                    </div>
+                    <div>
+                      Website:
                       { value.website }
                     </div>
                     <div>
+                      Username:
                       { value.username }
                     </div>
                     <div>
+                      Password:
                       { value.password }
                     </div>
                   </div>
