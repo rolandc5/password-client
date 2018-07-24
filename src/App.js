@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 import './App.css';
 
-import * as Pages from './pages/index'
+import * as Pages from './pages/index';
 
 class App extends Component {
+  componentWillMount() {
+  }
   render() {
     return (
-      <div>
-          <Route exact path="/" component={ Pages.Login }/>
-          <div>
-            <Route path="/blob/generator" component={ Pages.Generator }/>
-            <Route path="/blob/generator/passwords" component={ Pages.Password }/>
-          </div>
-      </div>
+      <main>
+        <Switch>
+          { localStorage.getItem('loggedIn') === 'true' ?  <Route exact path="/" component={ Pages.Generator }/> : <Route exact path="/" component={ Pages.Login }/> }
+          <Route path="/popup" component={ Pages.Create }/>
+          <Route path="/*" component={ Pages.Restricted}/>
+        </Switch>
+      </main>
     )
   }
 }
-
 export default App;
+
+/*
+{ localStorage.getItem('loggedIn') === 'true' ? /> : null }
+*/

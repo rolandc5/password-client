@@ -6,7 +6,7 @@
   display: flex;
   align-content: center;
   flex-direction: column;
-  width: 500px;
+  width: 200px;
 }
 
 .cButton {
@@ -22,13 +22,17 @@
   font-size: 100;
 }
 
-.centered {
-  display: flex;
-  justify-content: center;
-}
-
 .passwordList {
   display: flex;
   text-align: center;
   flex-direction: column;
+}
+
+.listBorder {
+  border: none;
+}
+
+.line {
+  border: solid 0.1px;
+  margin: 1%;
 }

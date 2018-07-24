@@ -1,0 +1,59 @@
+.container {
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.SBody {
+  border: none 1px;
+  margin: 1%;
+}
+
+.firstLine {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+Create CSS
+*/
+
+.outerBody {
+  width: 50%;
+}
+
+innerBody {
+  margin: 1%;
+}
+
+.space {
+  margin: 0.5%;
+}
+
+.createMain {
+  display: flex;
+  flex-direction: column;
+}
+
+.saveB {
+  margin: 0.5%;
+  padding: 3%;
+}
